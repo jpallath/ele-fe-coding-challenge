@@ -1,0 +1,301 @@
+@font-face {
+  font-family: 'FoundersGrotesk-Light';
+  src: url('../fonts/FoundersGrotesk-Light.woff') format('woff')
+}
+@font-face {
+  font-family: 'FoundersGrotesk-Medium';
+  src: url('../fonts/FoundersGrotesk-Medium.woff') format('woff')
+}
+@font-face {
+  font-family: 'FoundersGroteskRegular';
+  src: url('../fonts/FoundersGrotesk-Regular.woff') format('woff')
+}
+
+@media only screen and (max-width: 768px) {
+  html, body{
+    height: 100%;
+    margin: 0;
+  }
+  header{
+    background: black;
+    display: block;
+    width: 100%;
+    height: 60px;
+  }
+  .menu-open, .menu-close{
+    height: 20px;
+    width: 24px;
+    margin: 20px 24px;
+  }
+  .home-icon-mini{
+    height: 20px;
+    width: 64px;
+    margin: 20px 24px;
+  }
+  .menu-open{
+    display: none;
+  }
+  .menu-open.active{
+    display: inline-block;
+  }
+  .menu-close{
+    float: right;
+    display: none;
+  }
+  .overlay{
+    height: 100%;
+    position: absolute;
+    left: 250px;
+    transition: all .5s .4s ease-in;
+  }
+  .home-icon-mini{
+    position: absolute;
+    left: -270px;
+    transition: .5s all ease-in;
+  }
+  .home-icon-mini.active{
+    transform: translateX(270px);
+  }
+  .menu-close.active{
+    display: block;
+  }
+  .home-icon{
+    display: none;
+  }
+  .menu-container{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 90%;
+    list-style-type: none;
+    position: absolute;
+    top: 70px;
+    background: white;
+    z-index: 10;
+    left: -255px;
+    transition: .5s all ease-in;
+  }
+  .menu-container.active{
+    transform: translateX(255px);
+  }
+  .copyrights{
+    font-size: 12px;
+    font-family: "Helvetica";
+    padding: 0 24px;
+  }
+  nav li{
+    font-family: "FoundersGroteskRegular";
+    width: 100%;
+    font-size: 18px;
+    height: 35px;
+    position: relative;
+    left: 24px;
+  }
+  .submenu{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 0px;
+    overflow: hidden;
+    position: relative;
+    top: -15px;
+    transition: all .5s ease-in;
+  }
+
+  .submenu li{
+    font-size: 13px;
+    font-family: "FoundersGrotesk-Light";
+    left: 0;
+  }
+  span.carat{
+    position: absolute;
+    right: 5px;
+    transition: all .5s ease-in;
+  }
+  .carrot-event-a.active{
+    height: 75px;
+  }
+  .carrot-event-a.active .submenu{
+    height: 50px;
+  }
+  .carrot-event-a.active span{
+    transform: rotate(180deg);
+  }
+  .carrot-event-b.active span{
+    transform: rotate(180deg);
+  }
+  .carrot-event-c.active span{
+    transform: rotate(180deg);
+  }
+  .carrot-event-d.active span{
+    transform: rotate(180deg);
+  }
+  .carrot-event-b.active{
+    height: 155px;
+  }
+  .carrot-event-b.active .submenu{
+    height: 130px;
+  }
+  .carrot-event-c.active{
+    height: 95px;
+  }
+  .carrot-event-c.active .submenu{
+    height: 70px;
+  }
+  .carrot-event-d.active{
+    height: 135px;
+  }
+  .carrot-event-d.active .submenu{
+    height: 120px;
+  }
+  .page-content{
+    transition: .5s all ease-in;
+  }
+  .page-content img{
+    width: 100%;
+    height: 240px;
+    filter: grayscale(100%);
+  }
+  .page-content h1, .page-content p{
+    padding: 0 24px;
+  }
+  .page-content h1{
+    font-size: 44px;
+    font-family: "FoundersGrotesk-Medium";
+  }
+  .page-content p{
+    font-size: 16px;
+    font-family: "FoundersGrotesk-Light";
+  }
+  .page-content.deactive{
+    position: relative;
+    transform: translateX(250px);
+  }
+  .overlay.active{
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    width: 60%;
+  }
+  .image-container h1{
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) {
+header{
+  z-index: 100;
+  background-color: black;
+  height:72px;
+  position: absolute;
+  width: 100%;
+}
+.menu-close, .menu-open, .home-icon-mini, .copyrights{
+  display: none;
+}
+.home-icon{
+  position: absolute;
+  padding: 24px 48px 24px 24px;
+  font-family: 'FoundersGroteskRegular';
+  font-size: 13px;
+}
+.home-icon:hover{
+  stroke: black;
+  fill: black;
+  background: white;
+}
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 72px;
+  list-style-type: none;
+}
+
+nav li{
+  padding: 24px;
+  font-family: 'FoundersGroteskRegular';
+  position: relative;
+}
+
+nav li:hover, nav li g:hover, .carrot-event-a.active, .carrot-event-b.active,
+.carrot-event-c.active, .carrot-event-d.active{
+  background-color: white;
+  color: black;
+}
+
+.submenu{
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  background: white;
+  width: 190%;
+  z-index: 1;
+  left: 0;
+  padding-left: 0;
+}
+
+.submenu li {
+    padding: 18px 0px 18px 22px;
+    font-size: 18px;
+    white-space: nowrap;
+    transition: all ease-in .2s;
+    width: 88.5%;
+}
+
+.submenu li:hover{
+  background: #eee;
+}
+
+.carrot-event-a.active .submenu, .carrot-event-b.active .submenu,
+.carrot-event-c.active .submenu, .carrot-event-d.active .submenu{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.page-content{
+  position: relative;
+  top: 74px;
+}
+.page-content .title{
+  display: none;
+}
+.image-container h1{
+  display: inline-block;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  font-size: 124px;
+  color: white;
+  width: 70%;
+  text-align: center;
+  font-family: "FoundersGroteskRegular";
+}
+.overlay.active{
+  z-index: 10;
+  background: rgba(0,0,0,.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.page-content img{
+  width: 100%;
+  height: 600px;
+  filter: grayscale(100%);
+}
+
+.page-content p{
+  padding: 0 150px;
+  font-size: 18px;
+  font-family: "FoundersGrotesk-Light"
+}
+span.carat{
+display: none;
+}
+}
