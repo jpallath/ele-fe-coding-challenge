@@ -23,6 +23,6 @@ It looks like I covered a majority of the functionality that you've listed in yo
 
 I had trouble with the chevrons.  I actually didn't know they were chevrons until I finished reading the README, I just used carats (^) and now I feel like I might spend way too much time editing my project to add custom css for chevrons, so I'll let it be.
 
-##That's It
+## That's It
 Hopefully you're satisfied with this.  I wish I had more time, or I gave myself adequate time to get ready for this challenge.  This is the best I can do with my limited time though.  I do hope you like it.
 
